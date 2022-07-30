@@ -1,0 +1,101 @@
+.player {
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-control {
+    width: 60%;
+    display: flex;
+    
+    input {
+        
+        width: 100%;
+        -webkit-appearance: none;
+        background: transparent;
+        cursor: pointer;
+        
+    }
+
+    p {
+        padding: 1rem;
+    }
+}
+
+.play-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 20%;
+
+    svg {
+        cursor: pointer;
+        border: 2px dimgray solid;
+        border-radius: 50%;
+        padding: 4px 12px;
+    }
+    svg[data-icon="play"],
+    svg[data-icon="pause"] {
+        border: none;
+    }
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    background: transparent;
+    border: none;
+}
+
+.track {
+    margin: 1.15rem 0;
+    width: 100%;
+    height: 1rem;
+    background-color: lightblue;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.animate-track {
+    background-color: rgb(204, 204, 204);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(20%);
+    pointer-events: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .play-control {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .time-control {
+        width: 90%;
+    }
+    .play-control {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 372px) {
+    .play-control {
+        width: 100%;
+    }
+}

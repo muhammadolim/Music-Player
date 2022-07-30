@@ -1,0 +1,122 @@
+.library {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25rem;
+    height: 100%;
+    background-color: rgb(31, 31, 31);
+    box-shadow: 2px 2px 30px rgb(95, 95, 95);
+    overflow-y: scroll;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.library-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+        padding: 2rem;
+        color: whitesmoke;
+    }
+
+    .close {
+        color: white;
+        padding: 1rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        &:hover {
+            transform: rotate(-90deg);
+        }
+    }
+}
+
+.library-song {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    transition: background 0.3s ease;
+
+    img {
+        width: 30%;
+        border-radius: 10%;
+    }
+
+    &:hover {
+        background-color: rgb(72, 72, 72);
+        cursor: pointer;
+    }
+}
+
+.song-description {
+    padding-left: 1rem;
+
+    h3 {
+        font-size: 1.5rem;
+        color: lightgray;
+    }
+
+    h4 {
+        font-size: 1rem;
+        color: gray;
+    }
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+*::-webkit-scrollbar {
+    width: 5px;
+}
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.5);
+    border-radius: 20px;
+    border: transparent;
+}
+
+.selected {
+    background-color: rgba(250, 235, 215, 0.8); //antiquewhite
+
+    &:hover {
+        background-color: rgba(255, 228, 196, 0.8); //bisque
+    }
+    h3 {
+        color: black;
+    }
+
+    h4 {
+        color: dimgray;
+    }
+}
+
+.active-library {
+    transform: translateX(0%);
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .library {
+        width: 100%;
+        opacity: 1;
+        box-shadow: none;
+    }
+
+    .library-nav {
+        h2 {
+            padding: 1rem;
+        }
+    }
+
+    .library-song {
+        img {
+            width: 20%;
+        }
+    }    
+}
