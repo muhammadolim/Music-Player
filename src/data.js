@@ -12,6 +12,15 @@ function chillHop() {
             active: false,
         },
         {
+            name: "After Hours",
+            artist: "Poldoore",
+            cover: "https://chillhop.com/wp-content/uploads/2022/05/36fcc61f2d1c707e99f36706700d73229e2e8dff-1024x1024.jpg",
+            audio: "https://mp3.chillhop.com/serve.php/?mp3=36942",
+            color: ["#DBCEB2", "#C69200"],
+            id: uuidv4(),
+            active: false,
+        },
+        {
             name: "The Field From Spirited Away",
             artist: "Sleepy Fish, coa",
             cover: "https://chillhop.com/wp-content/uploads/2022/05/1c9e8f008e40a1d5c496a85b2aaf8c96a14a3c88-1024x1024.jpg",
